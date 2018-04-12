@@ -1,50 +1,12 @@
 //
-//  ViewController.swift
+//  FriendCell.swift
 //  fbMessenger
 //
-//  Created by ZainAnjum on 25/02/2018.
+//  Created by ZainAnjum on 08/03/2018.
 //  Copyright © 2018 ZainAnjum. All rights reserved.
 //
 
 import UIKit
-
-
-
-class FriendsController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let cellId = "cellId"
-    
-    var messages: [Message]?
-    
-   
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = "Recent"
-        collectionView?.backgroundColor = .white
-        collectionView?.register(FriendCell.self, forCellWithReuseIdentifier: cellId)
-        setupData()
-    }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return messages?.count ?? 0
-    }
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! FriendCell
-        if let message =  messages?[indexPath.item]{
-            cell.message = message
-        }
-        return cell
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 100)
-    }
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let layout = UICollectionViewFlowLayout()
-        let controller = ChatLogController(collectionViewLayout: layout)
-        controller.friend = messages?[indexPath.item].friend
-        navigationController?.pushViewController(controller, animated: true)
-    }
-}
 class FriendCell: UICollectionViewCell {
     
     var message: Message?{
@@ -66,7 +28,7 @@ class FriendCell: UICollectionViewCell {
     }
     
     let profileImageView: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.image = UIImage(named: "steve_profile")
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 34
@@ -74,12 +36,12 @@ class FriendCell: UICollectionViewCell {
         return iv
     }()
     let dividerView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = UIColor(white: 0.5, alpha: 0.5)
         return view
     }()
     let nameLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Steve Jobs"
         label.font = UIFont.systemFont(ofSize: 18)
         return label
@@ -152,15 +114,4 @@ class FriendCell: UICollectionViewCell {
         containerView.addConstraintsWithFormat(format: "V:[v0(20)]|", views: hasReadImageView)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
 

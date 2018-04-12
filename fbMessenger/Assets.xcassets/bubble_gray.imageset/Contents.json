@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "zuckprofile.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "bubble_gray@2x copy.png",
       "scale" : "2x"
     },
     {

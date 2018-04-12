@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4B5869F0204311BB0097DA1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5869EF204311BB0097DA1E /* AppDelegate.swift */; };
-		4B5869F2204311BB0097DA1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5869F1204311BB0097DA1E /* ViewController.swift */; };
+		4B5869F2204311BB0097DA1E /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B5869F1204311BB0097DA1E /* FriendsController.swift */; };
 		4B5869F5204311BB0097DA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5869F3204311BB0097DA1E /* Main.storyboard */; };
 		4B5869F8204311BB0097DA1E /* fbMessenger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B5869F6204311BB0097DA1E /* fbMessenger.xcdatamodeld */; };
 		4B5869FA204311BB0097DA1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B5869F9204311BB0097DA1E /* Assets.xcassets */; };
 		4B5869FD204311BB0097DA1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B5869FB204311BB0097DA1E /* LaunchScreen.storyboard */; };
 		4B586A0520431B040097DA1E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B586A0420431B040097DA1E /* Extensions.swift */; };
 		4B586A0720433DC80097DA1E /* FriendControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B586A0620433DC80097DA1E /* FriendControllerHelper.swift */; };
+		4B9229532051A98400FAD8EC /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9229522051A98400FAD8EC /* FriendCell.swift */; };
 		4B988BDD20448AF90096E3F1 /* ChatLogContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B988BDC20448AF90096E3F1 /* ChatLogContoller.swift */; };
+		4BB515992051A39A00DA7CCE /* ChatLogMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BB515982051A39A00DA7CCE /* ChatLogMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4B5869EC204311BB0097DA1E /* fbMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B5869EF204311BB0097DA1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B5869F1204311BB0097DA1E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B5869F1204311BB0097DA1E /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		4B5869F4204311BB0097DA1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B5869F7204311BB0097DA1E /* fbMessenger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fbMessenger.xcdatamodel; sourceTree = "<group>"; };
 		4B5869F9204311BB0097DA1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,7 +31,10 @@
 		4B5869FE204311BB0097DA1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B586A0420431B040097DA1E /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4B586A0620433DC80097DA1E /* FriendControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendControllerHelper.swift; sourceTree = "<group>"; };
+		4B9229522051A98400FAD8EC /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		4B988BDC20448AF90096E3F1 /* ChatLogContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogContoller.swift; sourceTree = "<group>"; };
+		4BB515982051A39A00DA7CCE /* ChatLogMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLogMessageCell.swift; sourceTree = "<group>"; };
+		4BDE8DD42055B08100C647ED /* fbMessenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = fbMessenger.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +51,11 @@
 		4B5869E3204311BB0097DA1E = {
 			isa = PBXGroup;
 			children = (
+				4BB5159A2051A3B000DA7CCE /* View */,
+				4BB5159B2051A3C200DA7CCE /* Controller */,
 				4B5869EE204311BB0097DA1E /* fbMessenger */,
 				4B5869ED204311BB0097DA1E /* Products */,
+				4BDE8DD52055B13900C647ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +70,42 @@
 		4B5869EE204311BB0097DA1E /* fbMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				4BDE8DD42055B08100C647ED /* fbMessenger.entitlements */,
 				4B586A0420431B040097DA1E /* Extensions.swift */,
 				4B5869EF204311BB0097DA1E /* AppDelegate.swift */,
-				4B5869F1204311BB0097DA1E /* ViewController.swift */,
 				4B5869F3204311BB0097DA1E /* Main.storyboard */,
 				4B5869F9204311BB0097DA1E /* Assets.xcassets */,
 				4B5869FB204311BB0097DA1E /* LaunchScreen.storyboard */,
 				4B5869FE204311BB0097DA1E /* Info.plist */,
 				4B5869F6204311BB0097DA1E /* fbMessenger.xcdatamodeld */,
+			);
+			path = fbMessenger;
+			sourceTree = "<group>";
+		};
+		4BB5159A2051A3B000DA7CCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4BB515982051A39A00DA7CCE /* ChatLogMessageCell.swift */,
+				4B9229522051A98400FAD8EC /* FriendCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4BB5159B2051A3C200DA7CCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4B5869F1204311BB0097DA1E /* FriendsController.swift */,
 				4B586A0620433DC80097DA1E /* FriendControllerHelper.swift */,
 				4B988BDC20448AF90096E3F1 /* ChatLogContoller.swift */,
 			);
-			path = fbMessenger;
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4BDE8DD52055B13900C647ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -109,6 +141,14 @@
 					4B5869EB204311BB0097DA1E = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -148,8 +188,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B5869F2204311BB0097DA1E /* ViewController.swift in Sources */,
+				4B5869F2204311BB0097DA1E /* FriendsController.swift in Sources */,
 				4B5869F8204311BB0097DA1E /* fbMessenger.xcdatamodeld in Sources */,
+				4BB515992051A39A00DA7CCE /* ChatLogMessageCell.swift in Sources */,
+				4B9229532051A98400FAD8EC /* FriendCell.swift in Sources */,
 				4B5869F0204311BB0097DA1E /* AppDelegate.swift in Sources */,
 				4B988BDD20448AF90096E3F1 /* ChatLogContoller.swift in Sources */,
 				4B586A0720433DC80097DA1E /* FriendControllerHelper.swift in Sources */,
@@ -294,7 +336,7 @@
 				DEVELOPMENT_TEAM = 5X49CZ67BQ;
 				INFOPLIST_FILE = fbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = anjumzain.fbMessenger;
+				PRODUCT_BUNDLE_IDENTIFIER = anjumzain.itempire.fbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +351,7 @@
 				DEVELOPMENT_TEAM = 5X49CZ67BQ;
 				INFOPLIST_FILE = fbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = anjumzain.fbMessenger;
+				PRODUCT_BUNDLE_IDENTIFIER = anjumzain.itempire.fbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
